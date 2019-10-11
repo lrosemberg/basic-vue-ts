@@ -1,8 +1,7 @@
-import Vue from 'vue';
-import App from './App.vue';
+import AppComponent from './app';
+import { Vue } from 'vue-property-decorator';
+import TodoAppComponent from './components/todo-app';
 
-Vue.config.productionTip = false;
+Vue.component('todo-app', TodoAppComponent);
 
-new Vue({
-  render: (h) => h(App),
-}).$mount('#app');
+new AppComponent({ el: '#app' });
